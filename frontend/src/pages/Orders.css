@@ -1,0 +1,81 @@
+.orders-page { padding-top: 100px; padding-bottom: 60px; min-height: 80vh; }
+.orders-page h1 { font-size: clamp(28px,4vw,42px); margin-bottom: 36px; }
+
+.orders-empty {
+  padding-top: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--ink-40);
+  min-height: 50vh;
+}
+.orders-empty a { color: var(--gold); }
+
+.orders-list { display: flex; flex-direction: column; gap: 20px; }
+
+.order-card {
+  background: #fff;
+  border: 1px solid var(--paper-3);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.order-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--paper-3);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.order-header h3 { font-family: var(--font-body); font-size: 16px; font-weight: 600; }
+.order-date { font-size: 13px; color: var(--ink-40); margin-top: 4px; }
+
+.order-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.order-total { font-family: var(--font-display); font-size: 22px; font-weight: 600; }
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.status-pending    { background: #fff3cd; color: #856404; }
+.status-processing { background: #cfe2ff; color: #084298; }
+.status-shipped    { background: #d1ecf1; color: #0c5460; }
+.status-delivered  { background: #d4edda; color: #155724; }
+.status-cancelled  { background: #f8d7da; color: #721c24; }
+
+.order-items { padding: 16px 24px; display: flex; flex-direction: column; gap: 12px; }
+
+.order-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 14px;
+}
+.order-item-img {
+  width: 56px; height: 56px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.order-item-img img { width: 100%; height: 100%; object-fit: cover; }
+.order-item-info { display: flex; flex-direction: column; gap: 3px; }
+.order-item-info a { font-size: 14px; font-weight: 500; color: var(--ink); }
+.order-item-info a:hover { color: var(--gold); }
+.order-item-info span { font-size: 12px; color: var(--ink-40); }
+.order-item-sub { font-size: 15px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+.order-address {
+  padding: 14px 24px;
+  font-size: 13px;
+  color: var(--ink-60);
+  border-top: 1px solid var(--paper-3);
+  background: var(--paper);
+}
